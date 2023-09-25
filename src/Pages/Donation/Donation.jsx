@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import DonationCard from "./DonationCard";
+import CardDetails from "../CardDetails.jsx/CardDetails";
+
 const Donation = () => {
 
    const [donation,setDonation] = useState([])

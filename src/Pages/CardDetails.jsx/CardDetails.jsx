@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import SingleCardDetails from "./SingleCardDetails";
+import MainLayout from "../../MainLayout/MainLayout";
 const CardDetails = () => {
   const[singleCard,setSingleCard] = useState({});
   const {id} = useParams();
