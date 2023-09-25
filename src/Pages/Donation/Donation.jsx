@@ -18,7 +18,7 @@ const Donation = () => {
     setNoFound("No Data Found")
   }
   },[])
-  console.log(donation);
+  
 
   return (
     <div>
