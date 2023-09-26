@@ -10,7 +10,7 @@ const Card = ({data}) => {
   return (
     <Link to={`/cards/${id}`}>
     <div className="mb-4" >
-      <div className="card w-80 shadow-xl"  style={{ backgroundColor: color_card_bg}}>
+      <div className="card w-[305px] shadow-xl"  style={{ backgroundColor: color_card_bg}}>
   <figure><img className=" h-48 w-80 " src={image} /></figure>
   <div className="card-body">
    <div  >
