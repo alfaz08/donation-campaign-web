@@ -4,21 +4,20 @@ import { useEffect, useState } from "react";
 import Banner from "../Banner/Banner";
 
 const Cards = ({searchResult}) => {
- console.log(searchResult);
+//  console.log(searchResult);
   const allData = useLoaderData();
-  console.log(allData);
-  const [value,setValue]= useState([])
-   
+  // console.log(allData);
+  const [value,setValue]= useState(allData)
+   console.log(value);
  useEffect(()=>{
   if(searchResult){
     setValue(searchResult)
   }
-  else{
-   
-     setValue(allData)  
-  }
+//   else{
+//     setValue(allData)
+//  }
   
- },[searchResult,allData])
+ },[searchResult])
  
   console.log(value);
 

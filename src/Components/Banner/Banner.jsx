@@ -8,8 +8,8 @@ const Banner = () => {
   const allData =useLoaderData();
   
   const [value,setValue] = useState('');
-  const[searchResult,setSearchResult] =useState([])
-
+  const [searchResult,setSearchResult] =useState([])
+  const [isShow,setIsShow] = useState(false)
 
 
  const onChange =(event) =>{
@@ -20,6 +20,8 @@ const Banner = () => {
     item.category.toLowerCase().includes(value.toLowerCase())
     )
     setSearchResult(filteredItem)
+    setIsShow(!false);
+    setValue("")
   }
   
   //  console.log(searchResult);
@@ -27,6 +29,7 @@ const Banner = () => {
 
   return (
     <div>
+      
       <div className="hero h-[400px]" style={{backgroundImage: 'url(https://i.ibb.co/QFp42Nd/Screenshot-2023-09-25-011410.jpg)'}}>
   <div className="hero-overlay bg-opacity-0 "></div>
   <div className="hero-content text-center text-neutral-content">
@@ -52,7 +55,7 @@ const Banner = () => {
 
 <div>
   {
-    <Cards searchResult={searchResult}></Cards>
+    isShow?<Cards searchResult={searchResult}></Cards>:<Cards></Cards>
   }
 </div>
     </div>
