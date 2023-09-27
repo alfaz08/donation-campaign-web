@@ -8,18 +8,16 @@ const Cards = ({searchResult}) => {
   const allData = useLoaderData();
   // console.log(allData);
   const [value,setValue]= useState(allData)
-   console.log(value);
+  //  console.log(value);
  useEffect(()=>{
   if(searchResult){
     setValue(searchResult)
   }
-//   else{
-//     setValue(allData)
-//  }
+
   
  },[searchResult])
  
-  console.log(value);
+  // console.log(value);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center mt-10">
